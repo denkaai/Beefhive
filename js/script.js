@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCartDrawerEvents();
   setupCatalogSearch();
   setupFaqAccordion();
+  setupCookieBanner();
   fetchProducts();
 });
 
@@ -671,4 +672,33 @@ function escapeHtml(str) {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
+}
+
+// Cookie Consent Notification Banner Setup
+function setupCookieBanner() {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('accept-cookies-btn');
+  const rejectBtn = document.getElementById('reject-cookies-btn');
+  if (!banner) return;
+
+  const consent = localStorage.getItem('beef_hive_cookie_consent');
+  if (!consent) {
+    setTimeout(() => {
+      banner.classList.add('show');
+    }, 1000);
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('beef_hive_cookie_consent', 'accepted');
+      banner.classList.remove('show');
+    });
+  }
+
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', () => {
+      localStorage.setItem('beef_hive_cookie_consent', 'rejected');
+      banner.classList.remove('show');
+    });
+  }
 }

@@ -930,19 +930,27 @@ img {
 }
 
 .btn-wa-direct {
-  background-color: var(--whatsapp-light);
-  color: var(--whatsapp-green);
-  border: 1px solid rgba(27, 138, 72, 0.3);
+  background-color: #25D366;
+  color: #FFFFFF;
+  border: none;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--transition-fast);
+  box-shadow: 0 3px 8px rgba(37, 211, 102, 0.3);
+}
+
+.btn-wa-direct svg {
+  fill: #FFFFFF !important;
+  width: 22px !important;
+  height: 22px !important;
 }
 
 .btn-wa-direct:hover {
-  background-color: var(--whatsapp-green);
-  color: #FFF;
+  background-color: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(37, 211, 102, 0.4);
 }
 
 /* Wholesale Callout Banner */
@@ -1769,17 +1777,155 @@ img {
   }
 }
 
+/* 19. Floating WhatsApp Quick Order Button */
+.floating-wa-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9998;
+  background-color: #25D366;
+  color: #FFFFFF;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.floating-wa-btn:hover {
+  background-color: #1EBE5D;
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+.floating-wa-btn svg {
+  fill: #FFFFFF;
+}
+
+.floating-wa-tooltip {
+  position: absolute;
+  right: 68px;
+  background-color: var(--bg-header);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  pointer-events: none;
+  box-shadow: var(--shadow-md);
+}
+
+.floating-wa-btn:hover .floating-wa-tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: 64px;
+}
+
+/* 20. Cookie Consent Notification Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  z-index: 10005;
+  background-color: var(--bg-header);
+  color: #FFFFFF;
+  border-top: 3px solid var(--primary-red);
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.2);
+  transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cookie-banner.show {
+  bottom: 0;
+}
+
+.cookie-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cookie-text strong {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.cookie-text p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  max-width: 720px;
+  margin: 0;
+}
+
+.cookie-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-cookie-accept {
+  background-color: var(--primary-red);
+  color: #FFFFFF;
+  border: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-cookie-accept:hover {
+  background-color: var(--primary-red-hover);
+}
+
+.btn-cookie-reject {
+  background-color: transparent;
+  color: var(--text-light);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-cookie-reject:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
 @media (max-width: 768px) {
-  .top-bar-left {
-    display: none;
+  .floating-wa-btn {
+    bottom: 72px; /* Position above mobile sticky nav */
+    right: 16px;
+    width: 48px;
+    height: 48px;
   }
-  .top-bar-inner {
-    justify-content: center;
+  .cookie-content {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .mobile-sticky-bar {
-    display: flex;
-  }
-  body {
-    padding-bottom: 60px;
+  .cookie-banner.show {
+    bottom: 56px; /* Position above mobile sticky bar */
   }
 }
+
