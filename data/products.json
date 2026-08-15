@@ -1,0 +1,181 @@
+{
+  "_comment": "Beef Hive Butchery official catalog with exact client images.",
+  "wholesalePrice": 650,
+  "products": [
+    {
+      "id": "beef-ribeye",
+      "name": "Beef Ribeye Steak",
+      "category": "beef",
+      "unit": "kg",
+      "price": 900,
+      "image": "images/ribeye-steak.jpg",
+      "desc": "Well-marbled prime ribeye steak cut, ideal for grilling, searing, or Mbuzi/Beef Choma."
+    },
+    {
+      "id": "beef-mince",
+      "name": "Lean Beef Mince",
+      "category": "beef",
+      "unit": "kg",
+      "price": 750,
+      "image": "images/Mince-Beef.jpg",
+      "desc": "Freshly ground premium beef, perfect for burgers, meatballs & samosa fillings."
+    },
+    {
+      "id": "beef-chops",
+      "name": "Beef Chops / Stewing Beef",
+      "category": "beef",
+      "unit": "kg",
+      "price": 800,
+      "image": "images/beef-chops.jpg",
+      "desc": "Tender cut beef chops & cubes, cut fresh for traditional Kenyan stews & wet fry."
+    },
+    {
+      "id": "beef-tbone",
+      "name": "Soft Fresh T-Bone Steak",
+      "category": "beef",
+      "unit": "kg",
+      "price": 950,
+      "image": "images/soft-fresh-beef-T-Bone.jpg",
+      "desc": "Juicy bone-in T-bone steak featuring sirloin and tenderloin cuts."
+    },
+    {
+      "id": "beef-fillet",
+      "name": "Quality Beef Fillet",
+      "category": "beef",
+      "unit": "kg",
+      "price": 1000,
+      "image": "images/qulity-beef-fillet.jpg",
+      "desc": "Ultra-tender prime beef fillet cut, soft and perfect for quick searing."
+    },
+    {
+      "id": "beef-ribs",
+      "name": "Beef Ribs / Short Ribs",
+      "category": "beef",
+      "unit": "kg",
+      "price": 800,
+      "image": "images/beef-ribs.jpg",
+      "desc": "Succulent beef ribs, ideal for slow roasting, braising, or choma."
+    },
+    {
+      "id": "beef-shin",
+      "name": "Beef Shin on Bone",
+      "category": "beef",
+      "unit": "kg",
+      "price": 750,
+      "image": "images/Beef-Shin-on-Bone.jpg",
+      "desc": "Rich, bone-in beef shin, perfect for deep-flavored soups, Osso Buco, and stews."
+    },
+
+    {
+      "id": "goat-leg",
+      "name": "Baby Goat Leg",
+      "category": "goat",
+      "unit": "kg",
+      "price": 950,
+      "image": "images/Baby_Goat_Leg.jpg",
+      "desc": "Tender young goat leg, cut to order for roasting or authentic Mbuzi Choma."
+    },
+    {
+      "id": "goat-short-ribs",
+      "name": "Goat Short Ribs",
+      "category": "goat",
+      "unit": "kg",
+      "price": 950,
+      "image": "images/gallery/goat-ribs.jpg",
+      "desc": "Flavorful succulent goat short ribs, best for open-flame grilling or dry fry."
+    },
+    {
+      "id": "goat-chops",
+      "name": "Fresh Goat Chops",
+      "category": "goat",
+      "unit": "kg",
+      "price": 950,
+      "image": "images/goat-chops.jpg",
+      "desc": "Trimmed goat chops ready for quick pan frying or open fire choma."
+    },
+    {
+      "id": "goat-diced",
+      "name": "Diced Goat Meat",
+      "category": "goat",
+      "unit": "kg",
+      "price": 900,
+      "image": "images/Diced-goat-meat.jpg",
+      "desc": "Clean cut goat cubes perfect for rich Mbuzi wet fry, soup, and stews."
+    },
+    {
+      "id": "goat-minced",
+      "name": "Raw Goat Mince",
+      "category": "goat",
+      "unit": "kg",
+      "price": 950,
+      "image": "images/raw-Goat-Minced.jpg",
+      "desc": "Freshly minced goat meat, rich in natural flavors for kebabs & burgers."
+    },
+
+    {
+      "id": "mutton-chops",
+      "name": "Mutton Chops & Ribs",
+      "category": "mutton",
+      "unit": "kg",
+      "price": 950,
+      "image": "images/mutton-ribs-1.jpg",
+      "desc": "Rich and tender mutton chops, trimmed and seasoned for roasting or pan fry."
+    },
+    {
+      "id": "mutton-mince",
+      "name": "Fresh Mutton Mince",
+      "category": "mutton",
+      "unit": "kg",
+      "price": 900,
+      "image": "images/raw-Goat-Minced.jpg",
+      "desc": "Finely minced fresh mutton, rich in natural flavors for kebabs & samosas."
+    },
+
+    {
+      "id": "poultry-kienyeji",
+      "name": "Kienyeji Chicken",
+      "category": "poultry",
+      "unit": "piece",
+      "price": 1200,
+      "image": "images/kienyeji-chicken.jpg",
+      "desc": "Dressed free-range Kienyeji chicken with firm meat and rich traditional soup flavor."
+    },
+    {
+      "id": "poultry-freerange",
+      "name": "Free-Range Farm Chicken",
+      "category": "poultry",
+      "unit": "piece",
+      "price": 1100,
+      "image": "images/free-range-kienyeji.jpg",
+      "desc": "Healthy farm-raised free range chicken raised on natural diet."
+    },
+    {
+      "id": "poultry-meat",
+      "name": "Fresh Chicken Meat Cuts",
+      "category": "poultry",
+      "unit": "kg",
+      "price": 850,
+      "image": "images/chickhen-meat.jpg",
+      "desc": "Fresh prepped chicken pieces, ready for stewing, frying, or curry."
+    },
+
+    {
+      "id": "offal-matumbo",
+      "name": "Fresh Matumbo (Beef Tripe)",
+      "category": "offal",
+      "unit": "kg",
+      "price": 450,
+      "image": "images/beef-matumbo.jpg",
+      "desc": "Thoroughly cleaned, fresh beef tripe (Wholesale available from KSh 350/kg) — a Kenyan favorite for wet fry & soup."
+    },
+    {
+      "id": "offal-liver",
+      "name": "Fresh Ox Liver (Maini)",
+      "category": "offal",
+      "unit": "kg",
+      "price": 750,
+      "image": "images/fresh-ox-liver.jpg",
+      "desc": "Nutrient-dense ox liver sliced daily. Tender, sweet, and soft when fried."
+    }
+  ]
+}
