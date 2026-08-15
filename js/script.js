@@ -30,6 +30,7 @@ let currentCategory = 'all';
 let currentSlideIndex = 0;
 let slideInterval = null;
 let cart = [];
+let searchQuery = '';
 
 // DOM Elements
 const catalogGrid = document.getElementById('catalog-grid');
@@ -64,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupDropdownCategoryLinks();
   setupHeroSlider();
   setupCartDrawerEvents();
+  setupCatalogSearch();
+  setupFaqAccordion();
   fetchProducts();
 });
 
@@ -485,18 +488,73 @@ function setCategory(category) {
   renderCatalog();
 }
 
+// Live Instant Search Handler
+function setupCatalogSearch() {
+  const searchInput = document.getElementById('catalog-search-input');
+  const clearBtn = document.getElementById('search-clear-btn');
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', (e) => {
+    searchQuery = e.target.value.trim().toLowerCase();
+    if (clearBtn) {
+      clearBtn.style.display = searchQuery.length > 0 ? 'inline-block' : 'none';
+    }
+    renderCatalog();
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      clearBtn.style.display = 'none';
+      renderCatalog();
+    });
+  }
+}
+
+// FAQ Accordion Handler
+function setupFaqAccordion() {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      
+      // Close other open FAQ items
+      document.querySelectorAll('.faq-item').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('active');
+          const otherBtn = other.querySelector('.faq-question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      item.classList.toggle('active', !isExpanded);
+      btn.setAttribute('aria-expanded', !isExpanded);
+    });
+  });
+}
+
 // 8. Render Product Cards Grid with Real Product Photos, Quantity Selectors & Add to Cart
 function renderCatalog() {
   if (!catalogGrid) return;
 
-  const filtered = currentCategory === 'all' 
+  let filtered = currentCategory === 'all' 
     ? allProducts 
     : allProducts.filter(p => p.category.toLowerCase() === currentCategory.toLowerCase());
+
+  if (searchQuery) {
+    filtered = filtered.filter(p => 
+      p.name.toLowerCase().includes(searchQuery) ||
+      p.desc.toLowerCase().includes(searchQuery) ||
+      p.category.toLowerCase().includes(searchQuery)
+    );
+  }
 
   if (filtered.length === 0) {
     catalogGrid.innerHTML = `
       <div class="catalog-empty">
-        <p>No products available in this category currently.</p>
+        <p>No products found matching "${escapeHtml(searchQuery || currentCategory)}".</p>
       </div>
     `;
     return;

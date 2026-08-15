@@ -37,7 +37,7 @@
         </span>
       </div>
       <div class="top-bar-right">
-        <a href="#" id="top-bar-wa-link" class="top-bar-wa-link">
+        <a href="https://wa.me/254714534463?text=Hi%2C%20I%27d%20like%20to%20order%20fresh%20cuts%20from%20Beef%20Hive%20Butchery" id="top-bar-wa-link" class="top-bar-wa-link">
           <span>Order on WhatsApp</span>
         </a>
       </div>
@@ -225,6 +225,15 @@
           </div>
         </div>
 
+        <!-- Instant Product Search Bar -->
+        <div class="catalog-search-wrapper">
+          <div class="catalog-search-box">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input type="text" id="catalog-search-input" placeholder="Search cuts (e.g. Ribeye, Matumbo, Goat, Liver, T-Bone)..." aria-label="Search cuts in menu">
+            <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Clear search input" style="display: none;">&times;</button>
+          </div>
+        </div>
+
         <!-- Product Cards Grid -->
         <div class="catalog-grid" id="catalog-grid" aria-live="polite">
           <!-- Dynamic product cards with real photos populated via products.json -->
@@ -329,6 +338,42 @@
       </div>
     </section>
 
+    <!-- Quality & Health Standards Certifications -->
+    <section class="certifications-section" aria-label="Health & Quality Standards">
+      <div class="container">
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-icon" aria-hidden="true">🕌</div>
+            <div class="cert-text">
+              <h4>100% Halal Certified</h4>
+              <p>Strictly slaughtered and processed according to Islamic rites standards.</p>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" aria-hidden="true">🛡️</div>
+            <div class="cert-text">
+              <h4>Public Health Inspected</h4>
+              <p>Certified by Kiambu County Public Health &amp; Veterinary Officers.</p>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" aria-hidden="true">❄️</div>
+            <div class="cert-text">
+              <h4>Cold Chain Storage</h4>
+              <p>Chilled continuously at 0°C – 4°C for absolute freshness and food safety.</p>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" aria-hidden="true">⚖️</div>
+            <div class="cert-text">
+              <h4>Digital Scales Accuracy</h4>
+              <p>Honest weight guarantee on every order trimmed at our counter.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- How Ordering Works — separate lighter section -->
     <section class="ordering-section" aria-label="How to Order">
       <div class="container">
@@ -356,6 +401,99 @@
             </div>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews-section" aria-label="Customer Reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">VERIFIED REVIEWS</span>
+          <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
+          <p class="section-desc">Trusted by local families, choma spots, and hotel chefs across Ruiru &amp; Kiambu County.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Best Mbuzi Choma cuts in Ruiru! We ordered 15kg for a family gathering near Rainbow Ruiru Resort. Fresh, tender meat and fair wholesale prices."</p>
+            <div class="review-author">
+              <strong>Chef Kamau</strong>
+              <span>Ruiru Grill Master</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Cleanest matumbo in Kiambu County. We buy wholesale 20kg weekly for our hotel. Instant WhatsApp order response and quick delivery."</p>
+            <div class="review-author">
+              <strong>Mama Njuguna</strong>
+              <span>Ruiru Hotelier</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Honest weight and soft prime T-Bone steaks. The website shopping cart makes daily home kitchen orders effortless!"</p>
+            <div class="review-author">
+              <strong>Wanjiru K.</strong>
+              <span>Local Resident, Ruiru</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section" id="faq" aria-label="Frequently Asked Questions">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">GOT QUESTIONS?</span>
+          <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="section-desc">Everything you need to know about ordering retail and wholesale cuts at Beef Hive Butchery.</p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Where is Beef Hive Butchery located in Ruiru?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We are located directly <strong>near Rainbow Ruiru Resort</strong>, along Thika Superhighway in Ruiru Town, Kiambu County. You can visit our shop daily or order online for local delivery.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>What are your wholesale rates and minimum quantities?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Our wholesale rates are <strong>KSh 650/kg for Prime Beef</strong> and <strong>from KSh 350/kg for Clean Matumbo</strong>. Wholesale pricing applies to bulk orders for choma joints, caterers, hotels, and family events.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Is all meat 100% Halal certified and health inspected?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! All our meat cuts (Beef, Goat, Mutton, Poultry, Offal) are 100% Halal certified, slaughtered under strict Islamic rites, and inspected daily by Kiambu County health officers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How do I order and pay?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Simply select your cuts on our website menu, click <strong>"ADD TO CART"</strong>, and tap <strong>"Send Order on WhatsApp"</strong>. We accept M-Pesa (Buy Goods / Till) and Cash on pickup or delivery.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -413,7 +551,7 @@
               <span aria-hidden="true">💬</span>
               <div>
                 <strong>WhatsApp Orders:</strong><br>
-                <a href="#" id="footer-wa-btn">Chat with Butcher on WhatsApp</a>
+                <a href="https://wa.me/254714534463?text=Hi%20Beef%20Hive%20Butchery%2C%20I%20would%20like%20to%20place%20an%20order." id="footer-wa-btn">Chat with Butcher on WhatsApp</a>
               </div>
             </li>
             <li class="info-item">
