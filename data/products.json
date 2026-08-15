@@ -8,7 +8,7 @@
       "category": "beef",
       "unit": "kg",
       "price": 900,
-      "image": "images/ribeye-steak.jpg",
+      "image": "images/menu/menu-1.jpg",
       "desc": "Well-marbled prime ribeye steak cut, ideal for grilling, searing, or Mbuzi/Beef Choma."
     },
     {
@@ -17,7 +17,7 @@
       "category": "beef",
       "unit": "kg",
       "price": 750,
-      "image": "images/Mince-Beef.jpg",
+      "image": "images/menu/menu-2.jpg",
       "desc": "Freshly ground premium beef, perfect for burgers, meatballs & samosa fillings."
     },
     {
@@ -26,7 +26,7 @@
       "category": "beef",
       "unit": "kg",
       "price": 800,
-      "image": "images/beef-chops.jpg",
+      "image": "images/menu/menu-3.jpg",
       "desc": "Tender cut beef chops & cubes, cut fresh for traditional Kenyan stews & wet fry."
     },
     {
