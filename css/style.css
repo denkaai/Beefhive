@@ -930,27 +930,38 @@ img {
 }
 
 .btn-wa-direct {
-  background-color: #25D366;
-  color: #FFFFFF;
-  border: none;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--transition-fast);
-  box-shadow: 0 3px 8px rgba(37, 211, 102, 0.3);
+  background-color: #25D366 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: var(--radius-md) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 42px !important;
+  width: 100% !important;
+  text-decoration: none !important;
+  box-shadow: 0 3px 8px rgba(37, 211, 102, 0.3) !important;
+  transition: all var(--transition-fast) !important;
 }
 
 .btn-wa-direct svg {
   fill: #FFFFFF !important;
+  color: #FFFFFF !important;
   width: 22px !important;
   height: 22px !important;
+  min-width: 22px !important;
+  min-height: 22px !important;
+  display: block !important;
+}
+
+.btn-wa-direct svg path {
+  fill: #FFFFFF !important;
 }
 
 .btn-wa-direct:hover {
-  background-color: #1EBE5D;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 12px rgba(37, 211, 102, 0.4);
+  background-color: #1EBE5D !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 12px rgba(37, 211, 102, 0.4) !important;
 }
 
 /* Wholesale Callout Banner */
