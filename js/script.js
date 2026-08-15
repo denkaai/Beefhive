@@ -114,7 +114,7 @@ function addToCart(productId, quantity = 1) {
   }
 
   saveCart();
-  showToast(`Added ${quantity} ${product.unit} x ${product.name} to Cart 🛒`);
+  showToast(`Added ${quantity} ${product.unit} x ${product.name} to Cart`);
 }
 
 // Update Item Quantity in Cart
@@ -157,7 +157,7 @@ function updateCartUI() {
   if (cart.length === 0) {
     cartDrawerItems.innerHTML = `
       <div class="cart-empty-msg">
-        <span class="cart-empty-icon">🛒</span>
+        <svg class="cart-empty-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
         <p>Your order cart is currently empty.</p>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Browse our fresh daily cuts and tap "Add to Cart" to start your order.</p>
       </div>
@@ -578,7 +578,7 @@ function renderCatalog() {
       <article class="product-card" data-category="${product.category}">
         <div class="product-card-img-wrap">
           <img src="${imgSrc}" alt="${escapeHtml(product.name)} fresh cut at Beef Hive Butchery" loading="lazy">
-          <span class="category-tag">${catIcon} ${product.category.toUpperCase()}</span>
+          <span class="category-tag">${product.category.toUpperCase()}</span>
         </div>
         
         <div class="product-card-body">
@@ -612,7 +612,7 @@ function renderCatalog() {
               data-id="${product.id}"
               aria-label="Add ${escapeHtml(product.name)} to cart"
             >
-              🛒 ADD TO CART
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> ADD TO CART
             </button>
 
             <a 
