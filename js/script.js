@@ -418,7 +418,7 @@ async function fetchProducts() {
       </div>
     `;
 
-    const response = await fetch('data/products.json');
+    const response = await fetch(`data/products.json?v=${Date.now()}`);
     if (!response.ok) {
       throw new Error(`Failed to load catalog data (Status: ${response.status})`);
     }
@@ -573,7 +573,7 @@ function renderCatalog() {
     const productMsg = `Hi, I'd like to order: ${product.name} (per ${product.unit}) — KSh ${product.price.toLocaleString()} from ${CONFIG.businessName}.`;
     const productWaUrl = waLink(productMsg);
     const catIcon = categoryIcons[product.category] || '🥩';
-    const imgSrc = product.image || 'images/ribeye-steak.jpg';
+    const imgSrc = product.image ? `${product.image}?v=2` : 'images/ribeye-steak.jpg';
 
     return `
       <article class="product-card" data-category="${product.category}">

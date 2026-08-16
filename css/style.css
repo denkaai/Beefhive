@@ -1766,6 +1766,10 @@ img {
     flex-direction: column;
     align-items: flex-start;
     display: none;
+    max-height: calc(100vh - 78px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 10000;
   }
 
   .main-nav.active {
@@ -1937,6 +1941,74 @@ img {
   }
   .cookie-banner.show {
     bottom: 56px; /* Position above mobile sticky bar */
+  }
+}
+
+/* 21. Android Phone & Small Screen Optimization (< 576px) */
+@media (max-width: 576px) {
+  .catalog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .product-card {
+    max-width: 100% !important;
+  }
+
+  .product-card-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .filter-pills-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-pills {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .catalog-search-wrapper {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .header-inner {
+    height: 68px;
+  }
+
+  .logo-chip {
+    height: 44px;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .slide-title {
+    font-size: 1.8rem !important;
+  }
+
+  .slide-container {
+    padding: 3rem 1rem !important;
+  }
+
+  .wholesale-banner {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wholesale-banner .btn {
+    width: 100%;
+  }
+
+  .steps-list {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
   }
 }
 
